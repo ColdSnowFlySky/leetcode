@@ -19,7 +19,7 @@ public class Solution {
         int index = 0;
         while(true) {
             int i;
-            if(a == true) i = 0;
+            if(a) i = 0;
             else i = list.size() - 1;
             while(true) {
                 if(data[list.get(i)] > 0) {
@@ -31,8 +31,7 @@ public class Solution {
                 if(i < 0 || i >= list.size()) break;
             }
             if(index == cs.length) break;
-            if(a) a = false;
-            else a = true;
+            a = !a;
         }
         return String.valueOf(result);
     }
